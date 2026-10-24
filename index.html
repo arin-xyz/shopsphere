@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopSphere — discover premium products for everyday living.">
+    <title>ShopSphere | Curated for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="announcement">
+        COMPLIMENTARY SHIPPING ON ORDERS OVER ₹2,000
+    </div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="logo" href="#" aria-label="ShopSphere home">
+                Shop<span>Sphere.</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#products">Shop All</a></li>
+                    <li><a href="#products">Collections</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <input
+                    id="searchInput"
+                    class="search-input"
+                    type="search"
+                    placeholder="Search products..."
+                    aria-label="Search products"
+                >
+                <button id="openCart" class="cart-button" type="button">
+                    Bag (<span id="cartCount">0</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div>
+                    <p class="eyebrow">The everyday edit</p>
+                    <h1>Find your next favourite.</h1>
+                    <p class="hero-description">
+                        Thoughtfully selected essentials, timeless design,
+                        and little things that make everyday living better.
+                    </p>
+                    <a class="primary-button" href="#products">
+                        Explore the collection
+                    </a>
+                </div>
+
+                <img
+                    class="hero-image"
+                    src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1200&q=85"
+                    alt="Minimal, thoughtfully designed living space"
+                >
+            </div>
+        </section>
+
+        <section class="section" id="products">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Made for your lifestyle</p>
+                        <h2>Discover our collection</h2>
+                    </div>
+                    <p id="resultsCount">Explore our latest finds.</p>
+                </div>
+
+                <div class="filter-bar">
+                    <div class="category-filters" id="categoryFilters">
+                        <button class="filter-button active" data-category="All" type="button">All</button>
+                        <button class="filter-button" data-category="Home" type="button">Home</button>
+                        <button class="filter-button" data-category="Fashion" type="button">Fashion</button>
+                        <button class="filter-button" data-category="Tech" type="button">Tech</button>
+                        <button class="filter-button" data-category="Lifestyle" type="button">Lifestyle</button>
+                    </div>
+
+                    <select id="sortSelect" class="sort-select" aria-label="Sort products">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+
+                <div class="product-grid" id="productGrid">
+                    <p>Loading products...</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container promo">
+                <p class="eyebrow">A little more intentional</p>
+                <h2>Good design. Everyday living.</h2>
+                <p>Discover useful things chosen with care and a little extra style.</p>
+                <a class="primary-button" href="#products">Shop the collection</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div>
+                <a class="logo" href="#">Shop<span>Sphere.</span></a>
+                <p>Your everyday, thoughtfully curated.</p>
+            </div>
+            <p>&copy; 2026 ShopSphere. Demo shopping experience.</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay" hidden>
+        <section class="cart-panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+            <div class="cart-header">
+                <h2 id="cartTitle">Your shopping bag</h2>
+                <button id="closeCart" class="close-cart" type="button" aria-label="Close cart">&times;</button>
+            </div>
+
+            <div id="cartItems"></div>
+
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+
+            <button id="checkoutButton" class="primary-button checkout-button" type="button">
+                Proceed to checkout
+            </button>
+
+            <p class="cart-note">
+                Demo checkout only. No payment will be collected.
+            </p>
+            
+<div id="checkoutFormContainer" hidden>
+    <hr>
+    <h3>Checkout details</h3>
+
+    <form id="checkoutForm">
+        <label for="customerName">Full name</label>
+        <input
+            id="customerName"
+            name="customerName"
+            type="text"
+            placeholder="Your full name"
+            required
+        >
+
+        <label for="customerEmail">Email address</label>
+        <input
+            id="customerEmail"
+            name="customerEmail"
+            type="email"
+            placeholder="you@example.com"
+            required
+        >
+
+        <label for="customerAddress">Delivery address</label>
+        <textarea
+            id="customerAddress"
+            name="customerAddress"
+            placeholder="Your delivery address"
+            rows="3"
+            required
+        ></textarea>
+
+        <p id="checkoutOrderSummary"></p>
+
+        <button class="primary-button checkout-button" type="submit">
+            Place demo order
+        </button>
+
+        <p class="cart-note">
+            Demo only — no payment or real delivery.
+        </p>
+    </form>
+</div>
+
+<div id="orderConfirmation" hidden>
+    <h3>Order confirmed!</h3>
+    <p id="confirmationMessage"></p>
+    <button id="continueShopping" class="primary-button" type="button">
+        Continue shopping
+    </button>
+</div>
+
+        </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" hidden></div>
+    <script src="script.js"></script>
+</body>
+</html>
