@@ -680,3 +680,352 @@ img {
         padding-right: 4px;
     }
 }
+
+/* =========================================
+   ShopSphere — Minimal Premium Theme
+   ========================================= */
+
+:root {
+    --minimal-bg: #ffffff;
+    --minimal-surface: #f7f7f5;
+    --minimal-text: #171717;
+    --minimal-muted: #737373;
+    --minimal-border: #e5e5e5;
+    --minimal-accent: #262626;
+}
+
+/* Overall page */
+body {
+    background: var(--minimal-bg);
+    color: var(--minimal-text);
+    font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+    letter-spacing: -0.015em;
+}
+
+h1, h2, h3, h4 {
+    color: var(--minimal-text);
+    letter-spacing: -0.04em;
+    line-height: 1.15;
+}
+
+p {
+    color: var(--minimal-muted);
+    line-height: 1.7;
+}
+
+/* Announcement bar */
+.announcement-bar {
+    background: var(--minimal-text);
+    color: #ffffff;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+}
+
+/* Header and navigation */
+header {
+    background: rgba(255, 255, 255, 0.96);
+    color: var(--minimal-text);
+    border-bottom: 1px solid var(--minimal-border);
+    box-shadow: none;
+}
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: var(--minimal-muted);
+}
+
+/* Buttons */
+button,
+.primary-button {
+    border-radius: 5px;
+    box-shadow: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.primary-button {
+    background: var(--minimal-text);
+    color: #ffffff;
+    border: 1px solid var(--minimal-text);
+}
+
+.primary-button:hover {
+    background: #404040;
+    color: #ffffff;
+}
+
+/* Inputs */
+input,
+textarea,
+select {
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: 2px solid #a3a3a3;
+    outline-offset: 2px;
+}
+
+/* Product cards */
+.product-card {
+    background: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: border-color 0.2s ease;
+}
+
+.product-card:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--minimal-border);
+}
+
+.product-card img {
+    border-radius: 3px;
+}
+
+/* Product filters */
+[data-category] {
+    box-shadow: none;
+}
+
+[data-category]:hover {
+    background: var(--minimal-surface);
+}
+
+/* Search and sorting */
+#searchInput,
+#sortSelect {
+    background: #ffffff;
+    color: var(--minimal-text);
+    border: 1px solid var(--minimal-border);
+}
+
+/* Cart panel */
+.cart-overlay {
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.cart-panel {
+    background: #ffffff;
+    box-shadow: none;
+}
+
+/* Checkout */
+#checkoutFormContainer {
+    border-color: var(--minimal-border);
+}
+
+#checkoutOrderSummary,
+#orderConfirmation {
+    background: var(--minimal-surface);
+    color: var(--minimal-text);
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #f7f7f5;
+    color: var(--minimal-text);
+    box-shadow: none;
+}
+
+/* Subtle animations and accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =========================================
+   ShopSphere — Lavender Theme
+   ========================================= */
+
+:root {
+    --lavender-bg: #F5F0FF;
+    --lavender-soft: #E7DDF9;
+    --lavender-primary: #7653A6;
+    --lavender-dark: #35264F;
+    --lavender-muted: #766987;
+    --lavender-border: #E4DAF2;
+    --lavender-white: #FFFFFF;
+}
+
+body {
+    background: var(--lavender-bg) !important;
+    color: var(--lavender-dark) !important;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+}
+
+/* Announcement bar */
+.announcement-bar {
+    background: var(--lavender-dark) !important;
+    color: #FFFFFF !important;
+}
+
+/* Header */
+header,
+.site-header,
+.navbar {
+    background: #FFFFFF !important;
+    color: var(--lavender-dark) !important;
+    border-bottom: 1px solid var(--lavender-border);
+    box-shadow: none !important;
+}
+
+/* Navigation links */
+header a,
+nav a {
+    color: var(--lavender-dark);
+}
+
+header a:hover,
+nav a:hover {
+    color: var(--lavender-primary);
+}
+
+/* Hero and promotional sections */
+.hero,
+.hero-section,
+.promo-section,
+.promo-banner,
+.about-section {
+    background-color: var(--lavender-soft);
+    color: var(--lavender-dark);
+}
+
+/* Main headings */
+h1, h2, h3, h4 {
+    color: var(--lavender-dark);
+    letter-spacing: -0.035em;
+}
+
+/* Body text */
+p {
+    color: var(--lavender-muted);
+    line-height: 1.7;
+}
+
+/* Product cards */
+.product-card,
+.product-item,
+.product {
+    background: #FFFFFF !important;
+    border: 1px solid var(--lavender-border);
+    border-radius: 10px !important;
+    box-shadow: none !important;
+}
+
+.product-card:hover,
+.product-item:hover,
+.product:hover {
+    border-color: #BCA5DF;
+    box-shadow: 0 6px 20px rgba(86, 57, 126, 0.08) !important;
+    transform: translateY(-2px);
+}
+
+/* Primary buttons */
+.primary-button {
+    background: var(--lavender-primary) !important;
+    color: #FFFFFF !important;
+    border: 1px solid var(--lavender-primary) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+.primary-button:hover {
+    background: var(--lavender-dark) !important;
+}
+
+/* Other buttons */
+button {
+    border-radius: 8px;
+}
+
+/* Search, sorting and checkout fields */
+input,
+textarea,
+select {
+    background: #FFFFFF;
+    color: var(--lavender-dark);
+    border: 1px solid var(--lavender-border);
+    border-radius: 8px !important;
+    box-shadow: none !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--lavender-primary);
+    outline: 2px solid rgba(118, 83, 166, 0.15);
+    outline-offset: 1px;
+}
+
+/* Category filters */
+[data-category] {
+    border-radius: 20px;
+    box-shadow: none !important;
+}
+
+[data-category]:hover {
+    background: var(--lavender-soft);
+    color: var(--lavender-dark);
+}
+
+/* Cart */
+.cart-overlay {
+    background: rgba(53, 38, 79, 0.35);
+}
+
+.cart-panel {
+    background: #FFFFFF !important;
+    color: var(--lavender-dark);
+    box-shadow: -8px 0 35px rgba(53, 38, 79, 0.08);
+}
+
+/* Checkout summary and confirmation */
+#checkoutOrderSummary,
+#orderConfirmation {
+    background: var(--lavender-bg) !important;
+    color: var(--lavender-dark);
+    border: 1px solid var(--lavender-border);
+    border-radius: 10px;
+}
+
+/* Checkout section */
+#checkoutFormContainer {
+    border-color: var(--lavender-border);
+}
+
+/* Footer */
+footer {
+    background: var(--lavender-dark) !important;
+    color: #FFFFFF !important;
+}
+
+footer p,
+footer a {
+    color: #E7DDF9;
+}
+
+/* Responsive accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
